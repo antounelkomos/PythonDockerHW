@@ -2,6 +2,15 @@ import math
 
 def addition(a, b):
     return a + b
+#You see whathadhabbenwaz
+def deco_func(func,*args):
+    try:
+        return func(*args)
+    except:
+        print("Error occured")
+        return None
+
+
 def subtraction(a, b):
     return a - b
 def multiplication(a, b):
@@ -20,7 +29,7 @@ class Calculator:
         pass
 
     def add(self, a, b):
-        self.result = addition(a, b)
+        self.result = deco_func(addition,a, b)
         return self.result
 
     def subtract(self, a, b):
